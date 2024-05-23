@@ -8,17 +8,20 @@ import id.ac.ui.cs.advprog.subscription.mock.Box;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class SubscriptionTest {
 
     private Subscription mockSubscription;
     private String subscriptionId;
-    private SubscriptionBox subscriptionBox;
+    private List<SubscriptionBox> subscriptionBox;
 
     @BeforeEach
     void setUp() {
-        subscriptionBox = new SubscriptionBox();
+        subscriptionBox = new ArrayList<>();
         mockSubscription = new Subscription("subscription-1", SubscriptionType.MONTHLY, SubscriptionStatus.PENDING, subscriptionBox);
     }
 
