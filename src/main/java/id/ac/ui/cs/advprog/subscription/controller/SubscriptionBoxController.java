@@ -4,10 +4,7 @@ import id.ac.ui.cs.advprog.subscription.domains.entities.SubscriptionBox;
 import id.ac.ui.cs.advprog.subscription.service.interfaces.SubscriptionBoxService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -32,4 +29,8 @@ public class SubscriptionBoxController {
         return subscriptionBoxService.getAvailableBoxes();
     }
 
+    @PostMapping("/")
+    public ResponseEntity<SubscriptionBox> createBox(@RequestBody SubscriptionBox subscriptionBox) {
+        return subscriptionBoxService.createBox(subscriptionBox);
+    }
 }

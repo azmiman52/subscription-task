@@ -6,11 +6,14 @@ import id.ac.ui.cs.advprog.subscription.domains.enums.SubscriptionType;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Getter @Setter
 public class SubscriptionData {
     private SubscriptionType type;
-    private SubscriptionStatus status;
+    private SubscriptionStatus statusString;
     private List<SubscriptionBox> subscriptionBox;
+
+//    private LocalDate startDate;
 }
