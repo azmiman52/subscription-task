@@ -10,4 +10,6 @@ public interface SubscriptionBoxService {
 
     public ResponseEntity<List<SubscriptionBox>> getAvailableBoxes();
 
+    public ResponseEntity<SubscriptionBox> createBox(SubscriptionBox subscriptionBox);
+
 }

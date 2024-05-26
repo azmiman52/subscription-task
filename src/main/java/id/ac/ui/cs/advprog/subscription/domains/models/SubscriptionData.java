@@ -13,7 +13,6 @@ import java.util.List;
 public class SubscriptionData {
     private SubscriptionType type;
     private SubscriptionStatus statusString;
+    private LocalDate startDate;
     private List<SubscriptionBox> subscriptionBox;
-
-//    private LocalDate startDate;
 }
